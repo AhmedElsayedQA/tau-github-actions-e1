@@ -1,0 +1,17 @@
+name : testGetHubActions
+on:
+  push:
+    branches: 
+      'feature/*'
+
+jobs: 
+  run-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4.2.1
+
+    - name: run tests
+      run: mvn test
+      
