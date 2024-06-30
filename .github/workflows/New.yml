@@ -1,7 +1,7 @@
 name : testGetHubActions
 on:
  schedule:
-   - cron: '30 23 * * *'
+   - cron: '35 20 * * *'
 
 jobs: 
   run-actions:
