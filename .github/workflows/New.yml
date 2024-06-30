@@ -1,0 +1,16 @@
+name : testGetHubActions
+on:
+ schedule:
+   - cron: '30 23 * * *'
+
+jobs: 
+  run-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4.2.1
+
+    - name: run tests
+      run: mvn test
+      
