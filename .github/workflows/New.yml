@@ -1,15 +1,15 @@
-name : testGetHubActions
+name : testGetHubActionsSchedule
 on:
  schedule:
-   - cron: '35 20 * * *'
+   - cron: '45 20 * * *'
 
 jobs: 
   run-actions:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Setup Java JDK
-      uses: actions/setup-java@v4.2.1
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.2
 
     - name: run tests
       run: mvn test
